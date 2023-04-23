@@ -221,8 +221,8 @@ if st.button("Scrape"):
 
                     col9 = "None"
                 try:
-                    openai.api_key =  st.secrets['API_KEY_SCORE'] 
-                    # "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"
+                    openai.api_key =  st.secrets['API_KEY'] 
+                   
                     
                     m = [{"role": "system", "content": f"{score_content}"},
                     {"role": "user", "content": f"Linkedin post:\n {data[i]['textContent']} \nScore:\n"}]
@@ -244,8 +244,8 @@ if st.button("Scrape"):
                 except:
                     col10 = "None"
                 if str(col10) == "75-100":
-                    openai.api_key = st.secrets[API_KEY_REPLY]
-                    # "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"
+                    openai.api_key = st.secrets['API_KEY']
+                    
 
                     m = [{"role": "system", "content": f"{reply_content}"},
                 {"role": "user", "content": f"{data[i]['textContent']} \nLinkedin reply:\n"}]
